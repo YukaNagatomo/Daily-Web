@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>For Web Design Course ~Third~</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/third.css">
+    <!--fullpage.js-->
+    <link rel="stylesheet" href="css/jquery.fullpage.css">
+    <script src="js/jquery.easings.min.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>  
+    <script src="js/jquery.fullpage.js"></script>
+    <script>
+        $(function() {
+            $('#fullpage').fullpage({
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="fullpage">
+        <section class="section">
+            <div class="slide slide1" data-anchor="slide1"> Slide 1 </div>
+            <div class="slide" data-anchor="slide2"> Slide 2 </div>
+            <div class="slide" data-anchor="slide3"> Slide 3 </div>
+            <div class="slide" data-anchor="slide4"> Slide 4 </div>
+        </section>
+        <section class="section">Some section</section>
+        <section class="section">Some section</section>
+        <section class="section">Some section</section>
+    </div>
+</body>
+
+</html>

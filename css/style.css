@@ -1,0 +1,322 @@
+/*フリーフォントの入れかた　format注意*/
+
+@font-face {
+    font-family: "StardustAdventure";
+    src: url(../fonts/StardustAdventure.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Comfortaa-Light";
+    src: url(../fonts/Comfortaa-Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "yasasisa";
+    src: url(../fonts/yasasisa.ttf) format("truetype");
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.title {
+    font-family: 'Pacifico', "StardustAdventure", cursive;
+    text-align: center;
+    font-size: 50px;
+    font-weight: normal;
+    padding: 20px 0;
+}
+
+/*nav*/
+
+.drawer-brand {
+    font-family: 'Pacifico', "StardustAdventure", cursive;
+}
+
+.drawer-menu-item {
+    font-family: "Comfortaa-Light";
+}
+
+/*bg1・Top*/
+
+#link-bg1 {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    background-color: #F4D2DE;
+    background-size: cover;
+}
+
+#link-bg1 canvas {
+    width: 100%;
+}
+
+.toptitle {
+    position: absolute;
+    width: 750px;
+    padding-bottom: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    text-align: left;
+}
+
+.toptitle h1 {
+    font-size: 110px;
+    font-weight: normal;
+    font-family: "StardustAdventure";
+}
+
+.toptitle h2 {
+    font-size: 20px;
+    text-align: right;
+    font-family: "Comfortaa-Light";
+}
+
+.title1 {
+    display: block;
+}
+
+.title2 {
+    display: none;
+}
+
+/*bg3・動画背景*/
+
+video {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*contents2*/
+
+.switch {
+    display: inline-block;
+}
+
+.switch img {
+    width: 300px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.modal3 {
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0px;
+    position: relative;
+}
+
+.modal3 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*contents3*/
+
+.contents3 {
+    display: inline-block;
+}
+
+.animated {
+    width: 220px;
+    height: 150px;
+    background-color: #F4D2DE;
+    border-radius: 10px;
+    display: table;
+    float: left;
+    margin: 0 10px;
+}
+
+.contents3 h2 {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Comfortaa-Light";
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.con3-res {
+    float: left;
+}
+
+.con3-1 {
+    animation-delay: 0;
+}
+
+.con3-2 {
+    animation-delay: 0.1s;
+}
+
+.con3-3 {
+    animation-delay: 0.2s;
+}
+
+.con3-4 {
+    animation-delay: 0.3s;
+}
+
+/*もっと見るボタン*/
+
+.contents4 {
+    display: inline-block;
+}
+
+.content {
+    margin: 30px 50px;
+    float: left;
+}
+
+.contents4_in p {
+    width: 400px;
+    height: 266px;
+    line-height: 266px;
+    font-size: 50px;
+    font-family: "Comfortaa-Light";
+    margin: 0 0 10px;
+    background-color: #99CFE5;
+}
+
+.contents4_in img {
+    width: 400px;
+}
+
+.morebutton {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background: #D45D87;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.btnclose {
+    background: #666;
+}
+
+/*iziModal*/
+
+.izimodal-btn img {
+    width: 300px;
+}
+
+.close {
+    text-align: right;
+    padding: 10px;
+}
+
+.iziModal-content {
+    text-align: center;
+}
+
+.iziModal-content img {
+    max-width: 750px;
+    width: 100%;
+    display: inline-block;
+    padding: 30px;
+}
+
+/*topへ戻る*/
+
+.pagetop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+.pagetop a {
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    color: #222;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    font-family: "Comfortaa-Light";
+    letter-spacing: 0.1em;
+}
+
+.pagetop a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/*レスポンシブ対応*/
+
+@media screen and (max-width: 1000px) {
+    /*bg1・Top*/
+    .toptitle {
+        width: 650px;
+    }
+    .toptitle h1 {
+        font-size: 95px;
+    }
+    .switch img {
+        margin: 0 10px 10px;
+    }
+    .animated {
+        margin: 0 10px 20px;
+    }
+    .con3-res {
+        float: none;
+    }
+    .content {
+        float: none;
+        margin: 50px 0;
+    }
+}
+
+/*タブレット対応*/
+
+@media screen and (max-width: 768px) {
+    /*bg1・Top*/
+    .toptitle {
+        width: 480px;
+    }
+    .toptitle h1 {
+        font-size: 70px;
+    }
+}
+
+/*スマホ対応*/
+
+@media screen and (max-width: 480px) {
+    /*bg1・Top*/
+    .toptitle {
+        width: 300px;
+    }
+    .toptitle h1 {
+        font-size: 70px;
+    }
+    .toptitle h2 {
+        font-size: 15px;
+    }
+    .title1 {
+        display: none;
+    }
+    .title2 {
+        display: block;
+    }
+    .animated {
+        float: none;
+    }
+    .pagetop a {
+        display: none;
+    }
+}
