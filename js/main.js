@@ -8,19 +8,7 @@ $(function () {
     //    raindrops.js
     $('#link-bg1').raindrops({
         color: '#fff',
-        canvasHeight: 250
-    });
-
-    //    jquery.ShuffleLetters.js
-    $('.shuffle').shuffleLetters();
-
-    //    bxslider.js
-    $('.slider').bxSlider({
-
-        auto: true,
-        mode: 'fade',
-        controls: false,
-        pager: false
+        canvasHeight: 280
     });
 
     //    slick.js

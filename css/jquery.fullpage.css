@@ -57,7 +57,7 @@ html.fp-enabled,
     -ms-user-select: none; /* IE10+ */
     position: absolute;
     z-index: 4;
-    top: 50%;
+    top: 52%;
     cursor: pointer;
     width: 0;
     height: 0;
@@ -68,21 +68,21 @@ html.fp-enabled,
     transform: translate3d(0,0,0);
 }
 .fp-controlArrow.fp-prev {
-    left: 15px;
+    left: 55px;
     width: 0;
     border-width: 25px 30px 25px 0;
-    border-color: transparent #aaa transparent transparent;
+    border-color: transparent #fdfdfd transparent transparent;
 }
 .fp-controlArrow.fp-prev:hover{
-    border-color: transparent #999 transparent transparent;
+    border-color: transparent #fafafa transparent transparent;
 }
 .fp-controlArrow.fp-next {
-    right: 15px;
+    right: 55px;
     border-width: 25px 0 25px 30px;
-    border-color: transparent transparent transparent #aaa;
+    border-color: transparent transparent transparent #fdfdfd;
 }
 .fp-controlArrow.fp-next:hover{
-    border-color: transparent transparent transparent #999;
+    border-color: transparent transparent transparent #fafafa;
 }
 .fp-scrollable {
     overflow: hidden;
@@ -100,7 +100,7 @@ html.fp-enabled,
 }
 #fp-nav {
     position: fixed;
-    z-index: 100;
+    z-index: 0;
     margin-top: -32px;
     top: 50%;
     opacity: 1;
@@ -163,19 +163,19 @@ html.fp-enabled,
     width: 12px;
     margin: -6px 0 0 -6px;
     border-radius: 100%;
+    background: #fdfdfd;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
-    border: 0;
-    background: #333;
+    height: 12px;
+    width: 12px;
+    border: 2px #fdfdfd solid;
     left: 50%;
     top: 50%;
-    margin: -2px 0 0 -2px;
+    margin: -6px 0 0 -6px;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
@@ -183,9 +183,8 @@ html.fp-enabled,
 }
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
-    width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px;
+    background: rgba(253,253,253,0.6);
+    
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;

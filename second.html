@@ -4,51 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <title>For Web Design Course ~Second~</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--googlefontの読み込み-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!--fullpage.jsの読み込み-->
+    <link rel="stylesheet" href="css/jquery.fullpage.css">
+    <!--bxsliderの読み込み-->
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <!--基本データの読み込み-->
     <link rel="stylesheet" href="css/second.css">
-    <!--multiscroll-->
-    <script type="text/javascript" src="js/jquery.easings.min.js"></script>
-    <script type="text/javascript" src="js/jquery.multiscroll.min.js"></script>
-    <link rel="stylesheet" href="css/jquery.multiscroll.css">
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#myContainer').multiscroll({
-                sectionsColor: ['#09aa04', '#ffbbbd', '#ffcc00'],
-                anchors: ['first', 'second', 'third'],
-                navigation: true,
-                loopBottom: true,
-                loopTop: true
-            });
-        });
-    </script>
 </head>
 
 <body>
-    <div id="myContainer">
-        <div class="ms-left">
-            <div class="ms-section">
-                <h1>Left 1</h1>
-            </div>
-            <div class="ms-section">
-                <h1>Left 2</h1>
-            </div>
-            <div class="ms-section">
-                <h1>Left 3</h1>
-            </div>
+    <div class="outer-menu">
+        <input class="checkbox-toggle" type="checkbox" />
+        <div class="hamburger">
+            <div></div>
         </div>
-
-        <div class="ms-right">
-            <div class="ms-section">
-                <h1>Right 1</h1>
-            </div>
-            <div class="ms-section">
-                <h1>Right 2</h1>
-            </div>
-            <div class="ms-section">
-                <h1>Right 3</h1>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Page1</a></li>
+                        <li><a href="second.html">Page2</a></li>
+                        <li><a href="#">Page3</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <div id="fullpage">
+        <!--手書き風アニメーション-->
+        <section id="section1" class="section section1">
+            <div class="svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 597 242" style="enable-background:new 0 0 597 242;" xml:space="preserve">
+                <path class="line st1" d="M175.5,76.5c0,0,72-29,39-57s-160.873,56.049-189,119c-21,47-7,77,13,85c18.312,7.325,55,14,129-58"/>
+                <path class="line st2" d="M257.5,59.5c0,0-85,115-83,122"/>
+	            <path class="line st3" d="M172.5,182.5c0,0,88-86,53-34c-32.212,47.858-9.908,30.605,18,12"/>
+                <path class="line st4"  d="M289,139c0,0,17-22-14.5-7.5c0,0-24.069,11.207-32,35c-7.5,22.5,23-2,23-2L286,143c0,0-51,64,10.5,16.5c0,0,7-7,12-16S364,60,364,60s-139,186-29.5,95.5L366,124"/>
+                <path class="line st5" d="M364.5,125.5c0,0-26,17-13,31S345,189,330,173"/>
+                <path class="line st6" d="M330,173c0,0,8,22,46-13"/>
+                <path class="line st7" d="M405.5,127.5c0,0-50,50-31,52c0,0,9,0,22-14s34-37,34-37l-31,35c0,0-12,25,5,13c13.597-9.598,31.477-21.477,37-27c6-6,25-25,25-25"/>
+                <line class="line st8" x1="464.5" y1="126.5" x2="433.5" y2="183.5"/>
+                <path class="line st9" d="M436.5,179.5l45-40c0,0,24-19,7,6c-15.44,22.707-25,36-25,36"/>
+                <path class="line st10" d="M463.5,181.5l48-43c0,0,20-14,8,3c-8.012,11.35-13.147,17.331-17,26c-4,9-6,17,7,10c11.032-5.94,26-17,26-17"/>
+                <path class="line st11" d="M558.5,126.5c0,0-67,91,5,34"/>
+                <line class="line st12" x1="322" y1="94.5" x2="363" y2="94.5"/>
+                <polygon class="star st13" points="575.836,118.344 569.814,110.799 560.184,111.482 565.499,103.423 561.872,94.476 571.18,97.04 578.569,90.826 579.006,100.471 587.199,105.578 578.162,108.974 	"/>
+            </svg>
+            </div>
+        </section>
+
+        <!--bxsliderを使用した全画面スライドショー-->
+        <section id="section2" class="section">
+            <div class="bg">
+                <div class="slider">
+                    <!--画像の大きさは揃える-->
+                    <div><img src="images/purple1.jpeg" alt=""></div>
+                    <div><img src="images/purple2.jpg" alt=""></div>
+                    <div><img src="images/purple3.jpeg" alt=""></div>
+                </div>
+                <h1 class="title">Slideshow</h1>
+            </div>
+        </section>
+
+        <!--全画面動画背景-->
+        <section id="section3" class="section">
+
+            <div class="bg">
+                <video src="aimyon.mp4" loop="" muted="" data-autoplay=""></video>
+                <h1 class="title">Video</h1>
+            </div>
+        </section>
+
+        <!--particles.jsを使用した動く背景-->
+        <section id="section4" class="section section4">
+            <div id="particles-js">
+                <h1>Particles</h1>
+            </div>
+        </section>
+
+        <!--@keyframesを使ったグラデーション背景-->
+        <section id="section5" class="section section5">
+            <h1>Gradation</h1>
+        </section>
+
+        <section id="section6" class="section section6">
+            <!--ShuffleLettersを使用したランダムテキスト表示-->
+            <div class="slide slide1">
+                <h1 class="shuffle title1">Shuffle Text</h1>
+            </div>
+            <div class="slide slide2">
+                <h1 class="neon">Neon Text</h1>
+            </div>
+        </section>
+    </div>
+
+    <!--jQueryの読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--fullpage.jsの読み込み-->
+    <script type="text/javascript" src="js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.fullpage.js"></script>
+    <!--bxsliderの読み込み-->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--particleの読み込み-->
+    <script type="text/javascript" src="./js/particles.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <!--ShuffleLettersの読み込み-->
+    <script src="./js/jquery.shuffleLetters.js"></script>
+    <!--inviewの読み込み-->
+    <script src="js/jquery.inview.min.js" type="text/javascript"></script>
+    <!--基本データの読み込み-->
+    <script type="text/javascript" src="./js/second.js"></script>
 </body>
 
 </html>

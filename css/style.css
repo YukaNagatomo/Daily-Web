@@ -1,8 +1,8 @@
 /*フリーフォントの入れかた　format注意*/
 
 @font-face {
-    font-family: "StardustAdventure";
-    src: url(../fonts/StardustAdventure.ttf) format("truetype");
+    font-family: "RoundyRainbows";
+    src: url(../fonts/RoundyRainbows.otf) format("opentype");
 }
 
 @font-face {
@@ -32,7 +32,7 @@ section {
     padding: 20px 0;
 }
 
-/*nav*/
+/*nav・ドロワー*/
 
 .drawer-brand {
     font-family: 'Pacifico', "StardustAdventure", cursive;
@@ -40,6 +40,60 @@ section {
 
 .drawer-menu-item {
     font-family: "Comfortaa-Light";
+}
+
+/*nav・水平*/
+
+#container-example {
+    position: fixed;
+    z-index: 1;
+    background: #a3d7ef;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px #bbb;
+}
+
+#container-example *,
+#container-example *::after,
+#container-example *::before {
+    box-sizing: border-box;
+}
+
+#container-example .strip {
+    float: right;
+    height: 57px;
+}
+
+#container-example a {
+    font-size: 12pt;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0px 15px;
+    width: 150px;
+    display: inline-block;
+    font-family: "Comfortaa-Light";
+}
+
+#container-example .colour-1 a::after {
+    width: 100%;
+    height: 0;
+    background: #fff;
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    margin: auto;
+}
+
+#container-example .colour-1 a:hover::after {
+    opacity: 1;
+    top: 100%;
+    height: 4px;
 }
 
 /*bg1・Top*/
@@ -50,10 +104,11 @@ section {
     position: relative;
     background-color: #F4D2DE;
     background-size: cover;
+    padding-top: 60px;
 }
 
 #link-bg1 canvas {
-    width: 100%;
+    width: 110%;
 }
 
 .toptitle {
@@ -68,9 +123,9 @@ section {
 }
 
 .toptitle h1 {
-    font-size: 110px;
+    font-size: 90px;
     font-weight: normal;
-    font-family: "StardustAdventure";
+    font-family: "RoundyRainbows";
 }
 
 .toptitle h2 {
@@ -87,17 +142,167 @@ section {
     display: none;
 }
 
-/*bg3・動画背景*/
+/*contents1・hover*/
 
-video {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+.contents1 {
+    display: inline-block;
 }
 
-/*contents2*/
+.contents1 img {
+    width: 300px;
+}
+
+.con1-1,
+.con1-2 {
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    overflow: hidden;
+    float: left;
+    margin: 0 30px;
+    position: relative;
+}
+
+.con1-1 p {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-size: 30px;
+    font-family: "yasasisa";
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.con1-1:hover p {
+    opacity: 1;
+}
+
+.con1-2 img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.con1-2 p {
+    opacity: 0;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    top: 40%;
+    z-index: 10;
+    font-size: 30px;
+    font-family: "yasasisa";
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.con1-2:hover img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.con1-2:hover p {
+    opacity: 1;
+}
+
+/*contents2・Animation*/
+
+.contents2 {
+    display: inline-block;
+}
+
+.animated {
+    width: 220px;
+    height: 150px;
+    background-color: #F4D2DE;
+    border-radius: 10px;
+    display: table;
+    float: left;
+    margin: 0 10px;
+}
+
+.contents2 h2 {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Comfortaa-Light";
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.con2-res {
+    float: left;
+}
+
+.con2-1 {
+    animation-delay: 0;
+}
+
+.con2-2 {
+    animation-delay: 0.1s;
+}
+
+.con2-3 {
+    animation-delay: 0.2s;
+}
+
+.con2-4 {
+    animation-delay: 0.3s;
+}
+
+/*contents3・もっと見るボタン*/
+
+.contents3 {
+    display: inline-block;
+}
+
+.content {
+    margin: 30px 0px;
+    float: left;
+    width: 420px;
+}
+
+.contents3_in p {
+    width: 400px;
+    height: 266px;
+    line-height: 266px;
+    font-size: 50px;
+    font-family: "Comfortaa-Light";
+    background-color: #a3d7ef;
+}
+
+.contents3_in img {
+    width: 400px;
+}
+
+.contents3_in {
+    width: 400px;
+    height: 266px;
+    margin: 0 10px 10px;
+}
+
+.morebutton {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background: #D45D87;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.btnclose {
+    background: #666;
+}
+
+/*contents5・modaal*/
 
 .switch {
     display: inline-block;
@@ -108,6 +313,11 @@ video {
     border-radius: 10px;
     margin: 0 10px;
 }
+
+.switch img:hover {
+    opacity: 0.8;
+}
+
 
 .modal3 {
     width: 100%;
@@ -124,92 +334,16 @@ video {
     height: 100%;
 }
 
-/*contents3*/
 
-.contents3 {
+
+/*contents6・iziModal*/
+
+.izimodal-btn {
     display: inline-block;
 }
-
-.animated {
-    width: 220px;
-    height: 150px;
-    background-color: #F4D2DE;
-    border-radius: 10px;
-    display: table;
-    float: left;
-    margin: 0 10px;
-}
-
-.contents3 h2 {
-    display: table-cell;
-    vertical-align: middle;
-    font-family: "Comfortaa-Light";
-    font-size: 30px;
-    font-weight: normal;
-}
-
-.con3-res {
-    float: left;
-}
-
-.con3-1 {
-    animation-delay: 0;
-}
-
-.con3-2 {
-    animation-delay: 0.1s;
-}
-
-.con3-3 {
-    animation-delay: 0.2s;
-}
-
-.con3-4 {
-    animation-delay: 0.3s;
-}
-
-/*もっと見るボタン*/
-
-.contents4 {
-    display: inline-block;
-}
-
-.content {
-    margin: 30px 50px;
-    float: left;
-}
-
-.contents4_in p {
-    width: 400px;
-    height: 266px;
-    line-height: 266px;
-    font-size: 50px;
-    font-family: "Comfortaa-Light";
-    margin: 0 0 10px;
-    background-color: #99CFE5;
-}
-
-.contents4_in img {
-    width: 400px;
-}
-
-.morebutton {
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-    background: #D45D87;
-    width: 200px;
-    margin: 0 auto;
-}
-
-.btnclose {
-    background: #666;
-}
-
-/*iziModal*/
 
 .izimodal-btn img {
-    width: 300px;
+    width: 500px;
 }
 
 .close {
@@ -226,6 +360,25 @@ video {
     width: 100%;
     display: inline-block;
     padding: 30px;
+}
+
+.con6-1 {
+    width: 500px;
+    height: 333px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.con6-1 img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.con6-1:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /*topへ戻る*/
@@ -265,7 +418,7 @@ video {
         width: 650px;
     }
     .toptitle h1 {
-        font-size: 95px;
+        font-size: 75px;
     }
     .switch img {
         margin: 0 10px 10px;
@@ -273,7 +426,7 @@ video {
     .animated {
         margin: 0 10px 20px;
     }
-    .con3-res {
+    .con2-res {
         float: none;
     }
     .content {
@@ -285,27 +438,16 @@ video {
 /*タブレット対応*/
 
 @media screen and (max-width: 768px) {
-    /*bg1・Top*/
-    .toptitle {
-        width: 480px;
+    /*nav・水平*/
+    #container-example a {
+        width: 120px;
     }
-    .toptitle h1 {
-        font-size: 70px;
-    }
-}
-
-/*スマホ対応*/
-
-@media screen and (max-width: 480px) {
     /*bg1・Top*/
     .toptitle {
         width: 300px;
     }
-    .toptitle h1 {
-        font-size: 70px;
-    }
     .toptitle h2 {
-        font-size: 15px;
+        font-size: 18px;
     }
     .title1 {
         display: none;
@@ -313,9 +455,54 @@ video {
     .title2 {
         display: block;
     }
+
+    /*hover*/
+    .con1-1,
+    .con1-2 {
+        float: none;
+        margin: 20px 0px;
+    }
+
+    /*iziModal*/
+    .izimodal-btn img {
+        width: 400px;
+    }
+    .con6-1 {
+        width: 400px;
+        height: 266px;
+    }
+}
+
+/*スマホ対応*/
+
+@media screen and (max-width: 480px) {
+    /*nav・水平*/
+    #container-example a {
+        width: 80px;
+    }
+    /*bg1・Top*/
+    .toptitle h1 {
+        font-size: 70px;
+    }
+    .toptitle h2 {
+        font-size: 15px;
+    }
+
+    /*animation*/
     .animated {
         float: none;
     }
+
+    /*iziModal*/
+    .izimodal-btn img {
+        width: 300px;
+    }
+    .con6-1 {
+        width: 300px;
+        height: 200px;
+    }
+
+    /*pagetop*/
     .pagetop a {
         display: none;
     }
