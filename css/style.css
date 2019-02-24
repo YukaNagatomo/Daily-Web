@@ -46,7 +46,7 @@ section {
 
 #container-example {
     position: fixed;
-    z-index: 1;
+    z-index: 20;
     background: #a3d7ef;
     width: 100%;
     overflow: hidden;
