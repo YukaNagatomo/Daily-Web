@@ -1,25 +1,45 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/*共通*/
+
+@font-face {
+  font-family: "GreatDayPersonalUse";
+  src: url(fonts/GreatDay.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "GreatDayPersonalUse";
-    src: url(fonts/GreatDay.ttf) format("truetype");
+  font-family: "Comfortaa-Light";
+  src: url(../fonts/Comfortaa-Light.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "Comfortaa-Light";
-    src: url(../fonts/Comfortaa-Light.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "LasEnter_PersonalUseOnly";
-    src: url(../fonts/LasEnter_PersonalUseOnly.ttf) format("truetype");
+  font-family: "LasEnter_PersonalUseOnly";
+  src: url(../fonts/LasEnter_PersonalUseOnly.ttf) format("truetype");
 }
 
 body {
-    background-color: #fefefe;
+  background-color: #fefefe;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  font-size: 100px;
+  font-family: 'Pacifico', "StardustAdventure", cursive;
+  z-index: 10;
+  color: #fefefe;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 60px;
+  }
 }
 
 /*menu画面*/
@@ -28,563 +48,560 @@ a,
 a:visited,
 a:hover,
 a:active {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .outer-menu {
-    position: fixed;
-    top: 35px;
-    right: 100px;
-    z-index: 1;
+  position: fixed;
+  top: 35px;
+  right: 100px;
+  z-index: 1;
 }
 
 .outer-menu .checkbox-toggle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
 }
 
 .outer-menu .checkbox-toggle:checked + .hamburger > div {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
 .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-    top: 0;
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+  top: 0;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-    opacity: 0;
+  opacity: 0;
 }
 
 .outer-menu .checkbox-toggle:checked ~ .menu {
-    pointer-events: auto;
-    visibility: visible;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .outer-menu .checkbox-toggle:checked ~ .menu > div {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    transition-duration: 0.75s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition-duration: 0.75s;
 }
 
 .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
-    opacity: 1;
-    transition: opacity 0.2s ease 0.2s;
+  opacity: 1;
+  transition: opacity 0.2s ease 0.2s;
 }
 
 .outer-menu .hamburger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 60px;
-    height: 60px;
-    background: rgba(202, 184, 217, 0.75);
-    border-radius: 0 0.12em 0.12em 0;
-    cursor: pointer;
-    transition: box-shadow 0.4s ease;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  background: rgba(202, 184, 217, 0.75);
+  border-radius: 0 0.12em 0.12em 0;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .outer-menu .hamburger > div {
-    position: relative;
-    flex: none;
-    width: 60%;
-    height: 2px;
-    background: #fefefe;
-    transition: all 0.4s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  flex: none;
+  width: 60%;
+  height: 2px;
+  background: #fefefe;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .outer-menu .hamburger > div:before,
 .outer-menu .hamburger > div:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: -10px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: inherit;
-    transition: all 0.4s ease;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  transition: all 0.4s ease;
 }
 
 .outer-menu .hamburger > div:after {
-    top: 10px;
+  top: 10px;
 }
 
 .outer-menu .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    visibility: hidden;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    outline: 1px solid transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .outer-menu .menu > div {
-    width: 200vw;
-    height: 200vw;
-    color: #fefefe;
-    background: rgba(71, 38, 110, 0.97);
-    border-radius: 50%;
-    transition: all 0.4s ease;
-    flex: none;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 200vw;
+  height: 200vw;
+  color: #fefefe;
+  background: rgba(71, 38, 110, 0.97);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  flex: none;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .outer-menu .menu > div > div {
-    text-align: center;
-    max-width: 90vw;
-    max-height: 100vh;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    overflow-y: auto;
-    flex: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .outer-menu .menu > div > div > ul {
-    list-style: none;
-    padding: 0 1em;
-    margin: 0;
-    display: block;
-    max-height: 100vh;
+  list-style: none;
+  padding: 0 1em;
+  margin: 0;
+  display: block;
+  max-height: 100vh;
 }
 
 .outer-menu .menu > div > div > ul > li {
-    padding: 0;
-    margin: 1em;
-    font-size: 40px;
-    display: block;
+  padding: 0;
+  margin: 1em;
+  font-size: 40px;
+  display: block;
 }
 
 .outer-menu .menu > div > div > ul > li > a {
-    position: relative;
-    display: inline;
-    cursor: pointer;
-    transition: color 0.4s ease;
-    font-family: "Comfortaa-Light";
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  font-family: "Comfortaa-Light";
 }
 
 .outer-menu .menu > div > div > ul > li > a:hover {
-    color: #e5e5e5;
+  color: #e5e5e5;
 }
 
 .outer-menu .menu > div > div > ul > li > a:hover:after {
-    width: 100%;
+  width: 100%;
 }
 
 .outer-menu .menu > div > div > ul > li > a:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: -0.15em;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #e5e5e5;
-    transition: width 0.4s ease;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -0.15em;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e5e5e5;
+  transition: width 0.4s ease;
 }
 
 
 /*section1*/
 
 .section1 {
-    text-align: center;
-    background-image: url(../images/thirdtop.jpg);
-    background-size: cover;
+  text-align: center;
+  background-image: url(../images/thirdtop.jpg);
+  background-size: cover;
 }
 
 /*svg*/
 
 #section1 .svg {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 #section1 svg {
-    width: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  #section1 svg {
+    width: 300px;
+  }
 }
 
 .line {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 7;
-    stroke-miterlimit: 10;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 7;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .star {
-    fill: #fff;
+  fill: #fff;
 }
 
 .st1 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1s ease-in-out alternate forwards;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1s ease-in-out alternate forwards;
 }
 
 .st2 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 0.8s ease-in alternate forwards;
-    animation-delay: 0.5s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 0.8s ease-in alternate forwards;
+  animation-delay: 0.5s;
 }
 
 .st3 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 0.8s ease-in alternate forwards;
-    animation-delay: 0.8s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 0.8s ease-in alternate forwards;
+  animation-delay: 0.8s;
 }
 
 .st4 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1s ease-in alternate forwards;
-    animation-delay: 1.1s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1s ease-in alternate forwards;
+  animation-delay: 1.1s;
 }
 
 .st5 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1.5s ease-in alternate forwards;
-    animation-delay: 1.8s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1.5s ease-in alternate forwards;
+  animation-delay: 1.8s;
 }
 
 .st6 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1s ease-in alternate forwards;
-    animation-delay: 2.1s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1s ease-in alternate forwards;
+  animation-delay: 2.1s;
 }
 
 .st7 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 0.8s ease-in alternate forwards;
-    animation-delay: 2.3s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 0.8s ease-in alternate forwards;
+  animation-delay: 2.3s;
 }
 
 .st8 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 0.7s ease-in alternate forwards;
-    animation-delay: 2.7s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 0.7s ease-in alternate forwards;
+  animation-delay: 2.7s;
 }
 
 .st9 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1s ease-in alternate forwards;
-    animation-delay: 2.8s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1s ease-in alternate forwards;
+  animation-delay: 2.8s;
 }
 
 .st10 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1s ease-in alternate forwards;
-    animation-delay: 3.1s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1s ease-in alternate forwards;
+  animation-delay: 3.1s;
 }
 
 .st11 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1s ease-in alternate forwards;
-    animation-delay: 3.5s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1s ease-in alternate forwards;
+  animation-delay: 3.5s;
 }
 
 .st12 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: stroke1 1s ease-in alternate forwards;
-    animation-delay: 3.8s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke1 1s ease-in alternate forwards;
+  animation-delay: 3.8s;
 }
 
 .st13 {
-    fill-opacity: 0;
-    animation: star 0.2s ease-in alternate forwards;
-    animation-delay: 4s;
+  fill-opacity: 0;
+  animation: star 0.2s ease-in alternate forwards;
+  animation-delay: 4s;
 }
 
 @keyframes stroke1 {
-    0% {
-        stroke-dashoffset: 1000;
-    }
+  0% {
+    stroke-dashoffset: 1000;
+  }
 
-    100% {
-        stroke-dashoffset: 0;
-    }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes star {
-    0% {
-        fill-opacity: 0;
-    }
-    100% {
-        fill-opacity: 1;
-    }
+  0% {
+    fill-opacity: 0;
+  }
+
+  100% {
+    fill-opacity: 1;
+  }
 }
 
 /*背景*/
 
-#section3 {
-    background-color: #000;
-}
-
 .bg {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-    .bg {
-        height: auto;
-    }
-}
-
-.title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
-    font-size: 100px;
-    font-family: 'Pacifico', "StardustAdventure", cursive;
-    z-index: 10;
-    color: #fefefe;
+.bg div {
+  height: 100%;
 }
 
 /*section3・動画背景*/
 
-video {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
+#section3 {
+  background-color: #000;
 }
+
+video {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 @media screen and (max-width: 1000px) {
-    video {
-        height: 100%;
-    }
+  video {
+    height: 100%;
+  }
 }
 
 /*section4・particle.js*/
 
 .section4 {
-    background-color: #351c52;
+  background-color: #351c52;
 }
 
 #particles-js {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.section4 h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
-    font-size: 100px;
-    font-family: 'Pacifico', "StardustAdventure", cursive;
-    color: #fefefe;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 /*section5・グラデーション背景*/
 
 .section5 {
-    min-width: 100%;
-    min-height: 100%;
-    text-align: center;
-    background: linear-gradient(230deg, #FC5C7D, #6A82FB);
-    background-size: 300% 300%;
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-    position: relative;
-}
-
-.section5 h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
-    font-size: 100px;
-    font-family: 'Pacifico', "StardustAdventure", cursive;
-    color: #fefefe;
+  min-width: 100%;
+  min-height: 100%;
+  text-align: center;
+  background: linear-gradient(230deg, #FC5C7D, #6A82FB);
+  background-size: 300% 300%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  position: relative;
 }
 
 @-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 @-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 @keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 /*section6・テキストアニメーション*/
 
 .section6 .slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-size: cover;
-    background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
 }
 
 .section6 .slide h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
 }
 
 /*shuffle*/
 
 .slide1 {
-    background-image: url(../images/slide1.jpg);
+  background-image: url(../images/slide1.jpg);
 }
 
 .slide1 h1 {
-    font-family: 'Pacifico', "StardustAdventure", cursive;
-    font-size: 94px;
-    text-align: center;
-    color: #fefefe;
+  font-family: 'Pacifico', "StardustAdventure", cursive;
+  font-size: 94px;
+  text-align: center;
+  color: #fefefe;
+}
+
+@media screen and (max-width: 768px) {
+  .slide1 h1 {
+    font-size: 35px;
+  }
 }
 
 /*neon*/
 
 .slide2 {
-    background: url(../images/slide2.jpeg), #606060;
-    background-blend-mode: multiply;
+  background: url(../images/slide2.jpeg), #606060;
+  background-blend-mode: multiply;
 }
 
 .neon {
-    font-family: "LasEnter_PersonalUseOnly";
-    font-size: 120px;
-    text-align: center;
-    font-weight: 100;
-    color: #fff;
-    text-shadow: 0 1px 50px #9933ff, 0 0 20px #fff, 0px 0px 60px #7f00ff;
-    -webkit-animation: blink 3s infinite alternate;
-    animation: blink 3s infinite alternate;
+  font-family: "LasEnter_PersonalUseOnly";
+  font-size: 120px;
+  text-align: center;
+  font-weight: 100;
+  color: #fff;
+  text-shadow: 0 1px 50px #9933ff, 0 0 20px #fff, 0px 0px 60px #7f00ff;
+  -webkit-animation: blink 3s infinite alternate;
+  animation: blink 3s infinite alternate;
+}
+
+@media screen and (max-width: 768px) {
+  .neon {
+    font-size: 60px;
+  }
 }
 
 @-webkit-keyframes blink {
-    40% {
-        opacity: .85;
-    }
-    42% {
-        opacity: .4;
-    }
-    43% {
-        opacity: .85;
-    }
-    45% {
-        opacity: .4;
-    }
-    46% {
-        opacity: .85;
-    }
+  40% {
+    opacity: .85;
+  }
+
+  42% {
+    opacity: .4;
+  }
+
+  43% {
+    opacity: .85;
+  }
+
+  45% {
+    opacity: .4;
+  }
+
+  46% {
+    opacity: .85;
+  }
 }
 
 @keyframes blink {
-    40% {
-        opacity: .85;
-    }
-    42% {
-        opacity: .4;
-    }
-    43% {
-        opacity: .85;
-    }
-    45% {
-        opacity: .4;
-    }
-    46% {
-        opacity: .85;
-    }
+  40% {
+    opacity: .85;
+  }
+
+  42% {
+    opacity: .4;
+  }
+
+  43% {
+    opacity: .85;
+  }
+
+  45% {
+    opacity: .4;
+  }
+
+  46% {
+    opacity: .85;
+  }
 }
 
 /*section7*/
 
-.section2{
+.section {
   width: 100%;
   height: 100%;
   background-size: cover;
 }
-

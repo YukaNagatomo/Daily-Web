@@ -1,337 +1,338 @@
 /*フリーフォントの入れかた　format注意*/
 
 @font-face {
-    font-family: "RoundyRainbows";
-    src: url(../fonts/RoundyRainbows.otf) format("opentype");
+  font-family: "RoundyRainbows";
+  src: url(../fonts/RoundyRainbows.otf) format("opentype");
 }
 
 @font-face {
-    font-family: "Comfortaa-Light";
-    src: url(../fonts/Comfortaa-Light.ttf) format("truetype");
+  font-family: "Comfortaa-Light";
+  src: url(../fonts/Comfortaa-Light.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "yasasisa";
-    src: url(../fonts/yasasisa.ttf) format("truetype");
+  font-family: "yasasisa";
+  src: url(../fonts/yasasisa.ttf) format("truetype");
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 section {
-    text-align: center;
-    padding-bottom: 200px;
+  text-align: center;
+  padding-bottom: 200px;
 }
 
 .title {
-    font-family: 'Pacifico', "StardustAdventure", cursive;
-    text-align: center;
-    font-size: 50px;
-    font-weight: normal;
-    padding: 20px 0;
+  font-family: 'Pacifico', "StardustAdventure", cursive;
+  text-align: center;
+  font-size: 50px;
+  font-weight: normal;
+  padding: 20px 0;
 }
 
 /*nav・ドロワー*/
 
 .drawer-brand {
-    font-family: 'Pacifico', "StardustAdventure", cursive;
+  font-family: 'Pacifico', "StardustAdventure", cursive;
 }
 
 .drawer-menu-item {
-    font-family: "Comfortaa-Light";
+  font-family: "Comfortaa-Light";
 }
 
 /*nav・水平*/
 
 #container-example {
-    position: fixed;
-    z-index: 20;
-    background: #a3d7ef;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 0px 3px 5px #bbb;
+  position: fixed;
+  z-index: 20;
+  background: #a3d7ef;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 3px 5px #bbb;
 }
 
 #container-example *,
 #container-example *::after,
 #container-example *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #container-example .strip {
-    float: right;
-    height: 57px;
+  float: right;
+  height: 57px;
+  margin-right: 60px;
 }
 
 #container-example a {
-    font-size: 12pt;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 2px;
-    position: relative;
-    text-align: center;
-    padding: 20px 0px 15px;
-    width: 150px;
-    display: inline-block;
-    font-family: "Comfortaa-Light";
+  font-size: 12pt;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0px 15px;
+  width: 150px;
+  display: inline-block;
+  font-family: "Comfortaa-Light";
 }
 
 #container-example .colour-1 a::after {
-    width: 100%;
-    height: 0;
-    background: #fff;
-    content: '';
-    position: absolute;
-    top: 75%;
-    left: 0;
-    opacity: 0;
-    transition: all 0.3s ease-out;
-    margin: auto;
+  width: 100%;
+  height: 0;
+  background: #fff;
+  content: '';
+  position: absolute;
+  top: 75%;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  margin: auto;
 }
 
 #container-example .colour-1 a:hover::after {
-    opacity: 1;
-    top: 100%;
-    height: 4px;
+  opacity: 1;
+  top: 100%;
+  height: 4px;
 }
 
 /*bg1・Top*/
 
 #link-bg1 {
-    width: 100%;
-    height: 650px;
-    position: relative;
-    background-color: #F4D2DE;
-    background-size: cover;
-    padding-top: 60px;
+  width: 100%;
+  height: 650px;
+  position: relative;
+  background-color: #F4D2DE;
+  background-size: cover;
+  padding-top: 60px;
 }
 
 #link-bg1 canvas {
-    width: 110%;
+  width: 110%;
 }
 
 .toptitle {
-    position: absolute;
-    width: 750px;
-    padding-bottom: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
-    text-align: left;
+  position: absolute;
+  width: 750px;
+  padding-bottom: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  text-align: left;
 }
 
 .toptitle h1 {
-    font-size: 90px;
-    font-weight: normal;
-    font-family: "RoundyRainbows";
+  font-size: 90px;
+  font-weight: normal;
+  font-family: "RoundyRainbows";
 }
 
 .toptitle h2 {
-    font-size: 20px;
-    text-align: right;
-    font-family: "Comfortaa-Light";
+  font-size: 20px;
+  text-align: right;
+  font-family: "Comfortaa-Light";
 }
 
 .title1 {
-    display: block;
+  display: block;
 }
 
 .title2 {
-    display: none;
+  display: none;
 }
 
 /*contents1・hover*/
 
 .contents1 {
-    display: inline-block;
+  display: inline-block;
 }
 
 .contents1 img {
-    width: 300px;
+  width: 300px;
 }
 
 .con1-1,
 .con1-2 {
-    width: 300px;
-    height: 200px;
-    background: #fff;
-    overflow: hidden;
-    float: left;
-    margin: 0 30px;
-    position: relative;
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  overflow: hidden;
+  float: left;
+  margin: 0 30px;
+  position: relative;
 }
 
 .con1-1 p {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 80px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    font-size: 30px;
-    font-family: "yasasisa";
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: 30px;
+  font-family: "yasasisa";
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .con1-1:hover p {
-    opacity: 1;
+  opacity: 1;
 }
 
 .con1-2 img {
-    -webkit-filter: blur(0);
-    filter: blur(0);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .con1-2 p {
-    opacity: 0;
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-    top: 40%;
-    z-index: 10;
-    font-size: 30px;
-    font-family: "yasasisa";
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  top: 40%;
+  z-index: 10;
+  font-size: 30px;
+  font-family: "yasasisa";
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .con1-2:hover img {
-    -webkit-filter: blur(3px);
-    filter: blur(3px);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
 }
 
 .con1-2:hover p {
-    opacity: 1;
+  opacity: 1;
 }
 
 /*contents2・Animation*/
 
 .contents2 {
-    display: inline-block;
+  display: inline-block;
 }
 
 .animated {
-    width: 220px;
-    height: 150px;
-    background-color: #F4D2DE;
-    border-radius: 10px;
-    display: table;
-    float: left;
-    margin: 0 10px;
+  width: 220px;
+  height: 150px;
+  background-color: #F4D2DE;
+  border-radius: 10px;
+  display: table;
+  float: left;
+  margin: 0 10px;
 }
 
 .contents2 h2 {
-    display: table-cell;
-    vertical-align: middle;
-    font-family: "Comfortaa-Light";
-    font-size: 30px;
-    font-weight: normal;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Comfortaa-Light";
+  font-size: 30px;
+  font-weight: normal;
 }
 
 .con2-res {
-    float: left;
+  float: left;
 }
 
 .con2-1 {
-    animation-delay: 0;
+  animation-delay: 0;
 }
 
 .con2-2 {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .con2-3 {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .con2-4 {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 /*contents3・もっと見るボタン*/
 
 .contents3 {
-    display: inline-block;
+  display: inline-block;
 }
 
 .content {
-    margin: 30px 0px;
-    float: left;
-    width: 420px;
+  margin: 30px 0px;
+  float: left;
+  width: 420px;
 }
 
 .contents3_in p {
-    width: 400px;
-    height: 266px;
-    line-height: 266px;
-    font-size: 50px;
-    font-family: "Comfortaa-Light";
-    background-color: #a3d7ef;
+  width: 400px;
+  height: 266px;
+  line-height: 266px;
+  font-size: 50px;
+  font-family: "Comfortaa-Light";
+  background-color: #a3d7ef;
 }
 
 .contents3_in img {
-    width: 400px;
+  width: 400px;
 }
 
 .contents3_in {
-    width: 400px;
-    height: 266px;
-    margin: 0 10px 10px;
+  width: 400px;
+  height: 266px;
+  margin: 0 10px 10px;
 }
 
 .morebutton {
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-    background: #D45D87;
-    width: 200px;
-    margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  background: #D45D87;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .btnclose {
-    background: #666;
+  background: #666;
 }
 
 /*contents5・modaal*/
 
 .switch {
-    display: inline-block;
+  display: inline-block;
 }
 
 .switch img {
-    width: 300px;
-    border-radius: 10px;
-    margin: 0 10px;
+  width: 300px;
+  border-radius: 10px;
+  margin: 0 10px;
 }
 
 .switch img:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 
 .modal3 {
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0px;
-    position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0px;
+  position: relative;
 }
 
 .modal3 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -339,171 +340,208 @@ section {
 /*contents6・iziModal*/
 
 .izimodal-btn {
-    display: inline-block;
+  display: inline-block;
 }
 
 .izimodal-btn img {
-    width: 500px;
+  width: 500px;
 }
 
 .close {
-    text-align: right;
-    padding: 10px;
+  text-align: right;
+  padding: 10px;
 }
 
 .iziModal-content {
-    text-align: center;
+  text-align: center;
 }
 
 .iziModal-content img {
-    max-width: 750px;
-    width: 100%;
-    display: inline-block;
-    padding: 30px;
+  max-width: 750px;
+  width: 100%;
+  display: inline-block;
+  padding: 30px;
 }
 
 .con6-1 {
-    width: 500px;
-    height: 333px;
-    overflow: hidden;
-    margin-top: 20px;
+  width: 500px;
+  height: 333px;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .con6-1 img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .con6-1:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /*topへ戻る*/
 
 .pagetop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
 }
 
 .pagetop a {
-    display: block;
-    background-color: #ccc;
-    text-align: center;
-    color: #222;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 5px 10px;
-    filter: alpha(opacity=50);
-    -moz-opacity: 0.5;
-    opacity: 0.5;
-    font-family: "Comfortaa-Light";
-    letter-spacing: 0.1em;
+  display: block;
+  background-color: #ccc;
+  text-align: center;
+  color: #222;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px 10px;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  font-family: "Comfortaa-Light";
+  letter-spacing: 0.1em;
 }
 
 .pagetop a:hover {
-    background-color: #222;
-    color: #fff;
+  background-color: #222;
+  color: #fff;
 }
 
 /*レスポンシブ対応*/
 
 @media screen and (max-width: 1000px) {
-    /*bg1・Top*/
-    .toptitle {
-        width: 650px;
-    }
-    .toptitle h1 {
-        font-size: 75px;
-    }
-    .switch img {
-        margin: 0 10px 10px;
-    }
-    .animated {
-        margin: 0 10px 20px;
-    }
-    .con2-res {
-        float: none;
-    }
-    .content {
-        float: none;
-        margin: 50px 0;
-    }
+
+  /*bg1・Top*/
+  .toptitle {
+    width: 650px;
+  }
+
+  .toptitle h1 {
+    font-size: 75px;
+  }
+
+  .switch img {
+    margin: 0 10px 10px;
+  }
+
+  .animated {
+    margin: 0 10px 20px;
+  }
+
+  .con2-res {
+    float: none;
+  }
+
+  .content {
+    float: none;
+    margin: 50px 0;
+  }
 }
 
 /*タブレット対応*/
 
 @media screen and (max-width: 768px) {
-    /*nav・水平*/
-    #container-example a {
-        width: 120px;
-    }
-    /*bg1・Top*/
-    .toptitle {
-        width: 300px;
-    }
-    .toptitle h2 {
-        font-size: 18px;
-    }
-    .title1 {
-        display: none;
-    }
-    .title2 {
-        display: block;
-    }
 
-    /*hover*/
-    .con1-1,
-    .con1-2 {
-        float: none;
-        margin: 20px 0px;
-    }
+  /*nav・水平*/
+  #container-example a {
+    width: 120px;
+  }
 
-    /*iziModal*/
-    .izimodal-btn img {
-        width: 400px;
-    }
-    .con6-1 {
-        width: 400px;
-        height: 266px;
-    }
+  /*bg1・Top*/
+  .toptitle {
+    width: 300px;
+  }
+
+  .toptitle h2 {
+    font-size: 18px;
+  }
+
+  .title1 {
+    display: none;
+  }
+
+  .title2 {
+    display: block;
+  }
+
+  /*hover*/
+  .con1-1,
+  .con1-2 {
+    float: none;
+    margin: 20px 0px;
+  }
+
+  /*  more*/
+  .content {
+    width: 300px;
+  }
+
+  .contents3_in {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+  }
+
+  .contents3_in p {
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+  }
+  
+  .contents3_in img{
+    width: 300px;
+  }
+
+  /*iziModal*/
+  .izimodal-btn img {
+    width: 400px;
+  }
+
+  .con6-1 {
+    width: 400px;
+    height: 266px;
+  }
 }
 
 /*スマホ対応*/
 
 @media screen and (max-width: 480px) {
-    /*nav・水平*/
-    #container-example a {
-        width: 80px;
-    }
-    /*bg1・Top*/
-    .toptitle h1 {
-        font-size: 70px;
-    }
-    .toptitle h2 {
-        font-size: 15px;
-    }
 
-    /*animation*/
-    .animated {
-        float: none;
-    }
+  /*nav・水平*/
+  #container-example a {
+    width: 80px;
+  }
 
-    /*iziModal*/
-    .izimodal-btn img {
-        width: 300px;
-    }
-    .con6-1 {
-        width: 300px;
-        height: 200px;
-    }
+  /*bg1・Top*/
+  .toptitle h1 {
+    font-size: 70px;
+  }
 
-    /*pagetop*/
-    .pagetop a {
-        display: none;
-    }
+  .toptitle h2 {
+    font-size: 15px;
+  }
+
+  /*animation*/
+  .animated {
+    float: none;
+  }
+
+  /*iziModal*/
+  .izimodal-btn img {
+    width: 300px;
+  }
+
+  .con6-1 {
+    width: 300px;
+    height: 200px;
+  }
+
+  /*pagetop*/
+  .pagetop a {
+    display: none;
+  }
 }

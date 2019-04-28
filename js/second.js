@@ -9,18 +9,18 @@ $(function () {
     navigation: true,
     resize: true
   });
-  $(window).on('load resize', function () {
-    responsive();
-  });
-
-  $(document).ready(function responsive() {
-    var w = $(window).width();
-    if (w <= 768) {
-      $.fn.fullpage.setResponsive(true);
-    } else {
-      $.fn.fullpage.setResponsive(false);
-    }
-  });
+//  $(window).on('load resize', function () {
+//    responsive();
+//  });
+//
+//  $(document).ready(function responsive() {
+//    var w = $(window).width();
+//    if (w <= 768) {
+//      $.fn.fullpage.setResponsive(true);
+//    } else {
+//      $.fn.fullpage.setResponsive(false);
+//    }
+//  });
 
   //    bxslider.js
   $('.slider').bxSlider({
